@@ -159,11 +159,8 @@ levelArr.forEach((level) => {
                 break;
             };
         }
-
     };
 });
 
 
 module.exports.defaultLogger = Log;
-const Logger = new Log({});
-Logger.dump(123123);

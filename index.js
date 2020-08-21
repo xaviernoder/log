@@ -1,7 +1,7 @@
 const fs = require('fs');
-const jsonize = require('./jsonize.js');
-const error = require("./error.js");
-const { formatDate } = require('./format.js'); 
+const jsonize = require('./lib/jsonize.js');
+const error = require("./lib/error.js");
+const { formatDate } = require('./lib/format.js'); 
 const { Console } = console;
 
 const styles = {
@@ -162,7 +162,7 @@ levelArr.forEach((level) => {
     };
 });
 
-const defaultLogger = new Log({})
+const defaultLogger = new Log({});
 module.exports.defaultLogger = Log;
 module.exports.dump = defaultLogger.dump.bind(defaultLogger);
 module.exports.warn = defaultLogger.warn.bind(defaultLogger);

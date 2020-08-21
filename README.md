@@ -2,7 +2,7 @@
 
 1. you can git clone [https://github.com/XavierJava/log.git](https://github.com/XavierJava/log.git) this libray in your project,
 
-in this log you can get which file and line you log,and log time
+    in this log you can get which file and line and log time
 
 2. const { dump, error, info, warn, celebr } = require('log/index.js');
 2. log number

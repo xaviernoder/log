@@ -162,5 +162,10 @@ levelArr.forEach((level) => {
     };
 });
 
-
+const defaultLogger = new Log({})
 module.exports.defaultLogger = Log;
+module.exports.dump = defaultLogger.dump.bind(defaultLogger);
+module.exports.warn = defaultLogger.warn.bind(defaultLogger);
+module.exports.info = defaultLogger.info.bind(defaultLogger);
+module.exports.error = defaultLogger.error.bind(defaultLogger);
+module.exports.celebr = defaultLogger.celebr.bind(defaultLogger);

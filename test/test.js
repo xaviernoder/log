@@ -4,6 +4,7 @@ const { dump, error, info, warn, celebr } = require('../index.js');
  * log number
  */
 info("log number");
+info("test,12312312");
 void function() {
     dump(123);
     error(123);

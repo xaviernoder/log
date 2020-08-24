@@ -55,7 +55,16 @@ const  getFileLine = function () {
             break;
         }
     }
-    line = " ("+line.split("/").slice(-3).join("/");
+    line = line.split("(")[1].split(":")[0];
+    const tempLine = line;
+    for(let index in errorStack) {
+        if(errorStack[index].includes(line)) {
+            line = errorStack[index];
+            break;
+        }
+    }
+    line =  " (" + tempLine.split("/").slice(-3).join("/") + line.split(tempLine)[1];
+    line.endsWith(")") ? "" : line += ")";
     return line;
 };
 
